@@ -1,0 +1,10 @@
+{
+  "apps": {
+    "slack-platform-dev": {
+      "name": "slack-platform-dev",
+      "app_id": "A03Q1TV1GNL",
+      "team_id": "T029AAKMXGF"
+    }
+  },
+  "default": "slack-platform-dev"
+}
