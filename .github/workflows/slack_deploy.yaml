@@ -51,8 +51,8 @@ jobs:
         
       - name: Replace strings in manifest.ts
         run: |
-          sed -i '' 's|__APP_NAME__|${{ secrets.APP_NAME }}|g' manifest.ts
-          sed -i '' 's|__REPO_URL__|${{ github.server_url }}/${{ github.repository }}|g' manifest.ts
+          sed -i '' 's|__APP_NAME__|${{ secrets.APP_NAME }}|g' ${{ github.workspace }}/manifest.ts
+          sed -i '' 's|__REPO_URL__|${{ github.server_url }}/${{ github.repository }}|g' ${{ github.workspace }}/manifest.ts
 
       #- name: Deploy slack app
       #  run: slack deploy --workspace ${{ secrets.TEAM_DOMAIN }}
