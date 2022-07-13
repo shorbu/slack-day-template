@@ -27,7 +27,7 @@ export const ReverseFunction = DefineFunction({
 
 export default Manifest({
   name: "toby-slack-day",
-  description: "Reverse a string",
+  description: "https://github.com/shorbu/slack-day-template",
   icon: "assets/icon.png",
   functions: [ReverseFunction],
   outgoingDomains: [],
