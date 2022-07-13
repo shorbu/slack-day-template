@@ -25,9 +25,10 @@ export const ReverseFunction = DefineFunction({
   },
 });
 
+// Do not remove/touch the name and description fields
 export default Manifest({
-  name: "toby-slack-day",
-  description: "https://github.com/shorbu/slack-day-template",
+  name: "__APP_NAME__",
+  description: "__REPO_URL__",
   icon: "assets/icon.png",
   functions: [ReverseFunction],
   outgoingDomains: [],

@@ -48,5 +48,10 @@ jobs:
       - name: List files in the repository
         run: ls ${{ github.workspace }}
         
+      - name: Replace strings in manifest.ts
+        run: |
+          sed -i 's/{{APP_NAME}}/${{ secrets.APP_NAME }}/g' manifest.ts
+          sed -i 's/{{REPO_URL}}/${{ github.server_url }}/${{ github.repository }}/g' manifest.ts
+
       - name: Deploy slack app
         run: slack deploy --workspace ${{ secrets.TEAM_DOMAIN }}
